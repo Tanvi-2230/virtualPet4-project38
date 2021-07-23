@@ -8,10 +8,12 @@ class Food{
       button.position(400,125);
 
       if(button.mousePressed(function(){
-         foodS=foodS-1; 
-         gameState=1;
-         database.ref('/').update({'gameState':gameState});
-      }));
+        console.log(foodS);
+         if(foodS>0){
+           foodS=foodS-1; 
+          gameState=1;
+          database.ref('/').update({'gameState':gameState});
+      }}));
       
       var addFood=createButton("Add Food");
       addFood.position(500,125);
