@@ -8,6 +8,7 @@ class Food{
       button.position(400,125);
 
       if(button.mousePressed(function(){
+        console.log(foodS);
          if(foodS>0){
            foodS=foodS-1; 
           gameState=1;
